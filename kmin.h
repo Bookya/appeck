@@ -9,7 +9,7 @@ class Matrix
 		int _size;
 		double ***_array;
 		int _k;
-		//double **_sum;
+		//double **_sum123;
 		//vector<vector <double> > kmin_vec;
 
 		

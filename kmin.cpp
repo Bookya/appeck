@@ -34,7 +34,7 @@ void Matrix::initial(int Size, int K)
 				_array[i][j][s]=1e9;
 		}
 	}
-	//kmin_vec = new int[length];
+	//kmin_vec = new int[length]123;
 }
 
 void Matrix::build_zero(double **w)
