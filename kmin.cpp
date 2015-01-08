@@ -121,23 +121,49 @@ void Matrix::build_weight(double **w, Matrix &pre)
 	}
 }
 
+
+Matrix Matrix::clone() 
+{
+	Matrix m;
+	m.initial(this->_size, this->_k);
+	for (int i = 0 ; i < _size ; ++i) 
+	{
+	    for (int j = 0 ; j < _size ; ++j) 
+		{
+			for (int s=0 ;s <_k;s++)
+			{
+				m._array[i][j][s] = this->_array[i][j][s];
+			}
+		}
+	}
+	return m;
+}
+
 void check_diagonal(Matrix &current,int num, vector<Matrix> &candidate)
 {
-	for(int i=0,j=0;i<current._size&&j<current._size;i++,j++)
+	for(int i=0;i<current._size;i++)
 	{
 		for(int s=0;s<current._k;s++)
-		if(current._array[i][j][s]!=1e9)
+		if(current._array[i][i][s]!=1e9)
 		{
-			candidate.push_back(current);//bug
-			current._array[i][j][s]=1e9;
+			candidate.push_back(current.clone());//bug
+			current._array[i][i][s]=1e9;
 		}
 	}	
 }
 
 
-Matrix::~Matrix() {
-	delete [] _array;
-    //kmin_vec.clear();
+Matrix::~Matrix() 
+{
+	for (int i = 0 ; i < _size ; ++i) 
+	{
+	    for (int j = 0 ; j < _size ; ++j) 
+		{
+	        delete [] _array[i][j];
+	    }
+	    delete [] _array[i];
+	}
+	//delete [] _array;
 }
 
 
@@ -187,6 +213,7 @@ int main()
 
 	Matrix matrix[V];
 	vector<Matrix> candidate;
+
 	for(int i=0;i<V;i++)
 	{
 		matrix[i].initial(V,k);
