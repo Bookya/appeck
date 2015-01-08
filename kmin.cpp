@@ -34,7 +34,7 @@ void Matrix::initial(int Size, int K)
 				_array[i][j][s]=1e9;
 		}
 	}
-	//kmin_vec = new int[length]123;
+	//kmin_vec = new int[length];
 }
 
 void Matrix::build_zero(double **w)
@@ -48,35 +48,33 @@ void Matrix::build_zero(double **w)
 	}
 }
 
-/*void s_j_weight::sort(s_j_weight v[], int count)
+void sort(s_i_weight v[], int count)
 {
 	double temp_weight=0;
 	int temp_s=0;
-	int temp_j=0;
+	int temp_i=0;
 	int t=0;
 	for (int round = 1; round <= count; round++)
 	{
         for (int t = 0; t < count - round; t++)
         {
-			if(v[t]._weight()>v[t+1]._weight())
+			if(v[t]._weight>v[t+1]._weight)
 			{
-				temp_s=v[t]._s();
-				temp_j=v[t]._j();
-				temp_weight=v[t]._weight();
-				v[t].set_j(v[t+1]._j());
-				v[t].set_s(v[t+1]._s());
-				v[t].set_w(v[t+1]._weight());
-				v[t+1].set_j(temp_j);
+				temp_s=v[t]._s;
+				temp_i=v[t]._i;
+				temp_weight=v[t]._weight;
+				v[t].set_i(v[t+1]._i);
+				v[t].set_s(v[t+1]._s);
+				v[t].set_w(v[t+1]._weight);
+				v[t+1].set_i(temp_i);
 				v[t+1].set_s(temp_s);
 				v[t+1].set_w(temp_weight);
-				
 			}
 		}
-		
 	}
-}*/
+}
 
-void Matrix::build_weight(double **w, Matrix pre)
+void Matrix::build_weight(double **w, Matrix &pre)
 {
 	int count=0;
 	s_i_weight v[_k*_size];
@@ -102,34 +100,13 @@ void Matrix::build_weight(double **w, Matrix pre)
 					}
 				}
 			}
-			double temp_weight=0;
-			int temp_s=0;
-			int temp_i=0;
-			int t=0;
-			for (int round = 1; round <= count; round++)
-			{
-    	    	for (int t = 0; t < count - round; t++)
-    	   	 	{
-					if(v[t]._weight>v[t+1]._weight)
-					{
-						temp_s=v[t]._s;
-						temp_i=v[t]._i;
-						temp_weight=v[t]._weight;
-						v[t].set_i(v[t+1]._i);
-						v[t].set_s(v[t+1]._s);
-						v[t].set_w(v[t+1]._weight);
-						v[t+1].set_i(temp_i);
-						v[t+1].set_s(temp_s);
-						v[t+1].set_w(temp_weight);
-					}
-				}
-			}
+			sort(v,count);
 			for(int x=0;x<_k;x++)
 			{
 				_array[current_i][j][x]=v[x]._weight;
 				if(v[x]._weight!=1e9)
 				{
-				cout<<"p_i="<<current_i<<" j="<<j<<" ";
+				cout<<"i="<<current_i<<" j="<<j<<" ";
 				cout<<"w="<<_array[current_i][j][x]<<" ";
 				}
 				
@@ -196,14 +173,10 @@ int main()
 		matrix[i].initial(V,k);
 	}
 	matrix[1].build_zero(w);
-	//cout<<"here"<<matrix[1]._array[0][0][0]<<" ";
 	for(int i=2;i<V;i++)
 	{
-		//matrix[i].build_weight(w,matrix[i-1]);
+		matrix[i].build_weight(w,matrix[i-1]);
 	}
-	matrix[2].build_weight(w,matrix[1]);
-	matrix[3].build_weight(w,matrix[2]);
-	cout<<matrix[3]._array[0][0][0]<<endl;
 	for(int j=0;j<V;j++)
 	{
 		cout<<"j="<<j<<" ";
@@ -212,8 +185,8 @@ int main()
 			cout<<"i="<<i<<" ";
 			for(int s=0;s<k;s++)
 			{
-				//if(matrix[1]._array[i][j][s]!=1e9)
-				//cout<<matrix[1]._array[i][j][s]<<endl;
+				if(matrix[1]._array[i][j][s]!=1e9)
+				cout<<matrix[1]._array[i][j][s]<<endl;
 			}
 			cout<<endl;
 		} 

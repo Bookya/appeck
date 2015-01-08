@@ -9,12 +9,12 @@ class Matrix
 		int _size;
 		double ***_array;
 		int _k;
-		//double **_sum123;
+		//double **_sum;
 		//vector<vector <double> > kmin_vec;
 
 		
 		void initial(int,int);
-		void build_weight(double**,Matrix);
+		void build_weight(double**,Matrix&);
 		void build_zero(double**);
 		//Min_k_i(double,int,int);
 
@@ -46,7 +46,7 @@ class s_i_weight
 	void set_s(int);
 	void set_i(int);
 	void set_w(double);
-	void sort(s_i_weight,int);
+	//void sort(s_i_weight*,int);
 	void clear();
 	//friend void build_weight(double**,int,Matrix,s_j_weight);
 
