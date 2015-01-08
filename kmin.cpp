@@ -35,6 +35,7 @@ void Matrix::initial(int Size, int K)
 		}
 	}
 	//kmin_vec = new int[length];
+	//因為不知道怎麼開V個有傳入值給constructor的matrix
 }
 
 void Matrix::build_zero(double **w)
@@ -74,45 +75,63 @@ void sort(s_i_weight v[], int count)
 	}
 }
 
+void s_i_weight_clear(s_i_weight v[], int count)
+{
+	for(int a=0;a<count;a++)
+	{
+		v[a].clear();
+	}
+}
+
 void Matrix::build_weight(double **w, Matrix &pre)
 {
-	int count=0;
+	int v_count=0;
 	s_i_weight v[_k*_size];
 	for(int j=0;j<_size;j++)
 	{
 		for(int current_i=0;current_i<_size;current_i++)
 		{
-			for(int a=0;a<count;a++)
-			{
-				v[a].clear();
-			}
-			count=0;
+			s_i_weight_clear(v,v_count);		
+			v_count=0;
 			for(int i=0;i<_size;i++)
 			{
 				for(int s=0;s<_k;s++)
 				{
 					if(pre._array[i][j][s]!=1e9&&w[current_i][i]!=1e9)
 					{
-					 	v[count].set_w(pre._array[i][j][s]+w[current_i][i]);
-						v[count].set_i(i);
-						v[count].set_s(s);
-						count++;
+					 	v[v_count].set_w(pre._array[i][j][s]+w[current_i][i]);
+						v[v_count].set_i(i);
+						v[v_count].set_s(s);
+						v_count++;
 					}
 				}
 			}
-			sort(v,count);
+			sort(v,v_count);
 			for(int x=0;x<_k;x++)
 			{
 				_array[current_i][j][x]=v[x]._weight;
-				if(v[x]._weight!=1e9)
+				/*if(v[x]._weight!=1e9)
 				{
 				cout<<"i="<<current_i<<" j="<<j<<" ";
 				cout<<"w="<<_array[current_i][j][x]<<" ";
-				}
+				}*/
 				
 			}
 		}
 	}
+}
+
+void check_diagonal(Matrix &current,int num, vector<Matrix> &candidate)
+{
+	for(int i=0,j=0;i<current._size&&j<current._size;i++,j++)
+	{
+		for(int s=0;s<current._k;s++)
+		if(current._array[i][j][s]!=1e9)
+		{
+			candidate.push_back(current);//bug
+			current._array[i][j][s]=1e9;
+		}
+	}	
 }
 
 
@@ -167,7 +186,7 @@ int main()
 //    w[3][2] = 100;
 
 	Matrix matrix[V];
-
+	vector<Matrix> candidate;
 	for(int i=0;i<V;i++)
 	{
 		matrix[i].initial(V,k);
@@ -176,20 +195,25 @@ int main()
 	for(int i=2;i<V;i++)
 	{
 		matrix[i].build_weight(w,matrix[i-1]);
+		check_diagonal(matrix[i],i,candidate);
 	}
-	for(int j=0;j<V;j++)
+	cout<<endl;
+	for(int num=0;num<V;num++)
 	{
-		cout<<"j="<<j<<" ";
-		for(int i=0;i<V;i++)
+		for(int j=0;j<V;j++)
 		{
-			cout<<"i="<<i<<" ";
-			for(int s=0;s<k;s++)
+			for(int i=0;i<V;i++)
 			{
-				if(matrix[1]._array[i][j][s]!=1e9)
-				cout<<matrix[1]._array[i][j][s]<<endl;
-			}
-			cout<<endl;
-		} 
+				for(int s=0;s<k;s++)
+				{
+					if(matrix[num]._array[i][j][s]!=1e9)
+					{					
+						cout<<"num "<<num<<" i="<<i<<" j="<<j<<" ";
+						cout<<matrix[num]._array[i][j][s]<<endl;
+					}
+				}
+			} 
+		}
 	}
 
 }
