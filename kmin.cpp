@@ -35,7 +35,7 @@ void Matrix::initial(int Size, int K)
 		}
 	}
 	//kmin_vec = new int[length];
-	//因為不知道怎麼開V個有傳入值給constructor的matrix
+
 }
 
 void Matrix::build_zero(double **w)
@@ -49,7 +49,7 @@ void Matrix::build_zero(double **w)
 	}
 }
 
-void sort(s_i_weight v[], int count)
+void sort(i_j_s_weight v[], int count)
 {
 	double temp_weight=0;
 	int temp_s=0;
@@ -75,7 +75,7 @@ void sort(s_i_weight v[], int count)
 	}
 }
 
-void s_i_weight_clear(s_i_weight v[], int count)
+void i_j_s_weight_clear(i_j_s_weight v[], int count)
 {
 	for(int a=0;a<count;a++)
 	{
@@ -86,12 +86,12 @@ void s_i_weight_clear(s_i_weight v[], int count)
 void Matrix::build_weight(double **w, Matrix &pre)
 {
 	int v_count=0;
-	s_i_weight v[_k*_size];
+	i_j_s_weight v[_k*_size];
 	for(int j=0;j<_size;j++)
 	{
 		for(int current_i=0;current_i<_size;current_i++)
 		{
-			s_i_weight_clear(v,v_count);		
+			i_j_s_weight_clear(v,v_count);		
 			v_count=0;
 			for(int i=0;i<_size;i++)
 			{
@@ -101,6 +101,7 @@ void Matrix::build_weight(double **w, Matrix &pre)
 					{
 					 	v[v_count].set_w(pre._array[i][j][s]+w[current_i][i]);
 						v[v_count].set_i(i);
+						v[v_count].set_j(j);
 						v[v_count].set_s(s);
 						v_count++;
 					}
@@ -139,14 +140,16 @@ Matrix Matrix::clone()
 	return m;
 }
 
-void check_diagonal(Matrix &current,int num, vector<Matrix> &candidate)
+void check_diagonal(Matrix &current,int step, vector<i_j_s_weight> &candidate)
 {
 	for(int i=0;i<current._size;i++)
 	{
 		for(int s=0;s<current._k;s++)
 		if(current._array[i][i][s]!=1e9)
 		{
-			candidate.push_back(current.clone());//bug
+			i_j_s_weight diag(i,i,s,current._array[i][i][s]);
+			diag.set_step(step);
+			candidate.push_back(diag);
 			current._array[i][i][s]=1e9;
 		}
 	}	
@@ -163,24 +166,35 @@ Matrix::~Matrix()
 	    }
 	    delete [] _array[i];
 	}
-	//delete [] _array;
+	delete [] _array;
 }
 
 
-void s_i_weight::set_s(int s)
+void i_j_s_weight::set_s(int s)
 {
 	_s=s;
 }
-void s_i_weight::set_i(int i)
+void i_j_s_weight::set_i(int i)
 {
 	_i=i;
 }
-void s_i_weight::set_w(double w)
+
+void i_j_s_weight::set_j(int j)
+{
+	_j=j;
+}
+
+void i_j_s_weight::set_step(int step)
+{
+	_step=step;
+}
+
+void i_j_s_weight::set_w(double w)
 {
 	_weight=w;
 }
 
-void s_i_weight::clear()
+void i_j_s_weight::clear()
 {
 	_weight=1e9;
 	_s=0;
@@ -212,7 +226,7 @@ int main()
 //    w[3][2] = 100;
 
 	Matrix matrix[V];
-	vector<Matrix> candidate;
+	vector<i_j_s_weight> candidate;
 
 	for(int i=0;i<V;i++)
 	{
