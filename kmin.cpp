@@ -35,7 +35,7 @@ void Matrix::initial(int Size, int K)
 		}
 	}
 	//kmin_vec = new int[length];
-	//因為不知道怎麼開V個有傳入值給constructor的matrix
+	//因為不知道怎麼開V個有傳入值給constructor的matrix 
 }
 
 void Matrix::build_zero(double **w)
