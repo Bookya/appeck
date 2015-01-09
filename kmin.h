@@ -16,6 +16,7 @@ class Matrix
 		void initial(int,int);
 		void build_weight(double**,Matrix&);
 		void build_zero(double**);
+		Matrix clone(); 
 		//Min_k_i(double,int,int);
 
 		/*double mean();	
@@ -35,18 +36,22 @@ class Matrix
 
 };
 
-class s_i_weight
+class i_j_s_weight
 {
 	public:
-		s_i_weight(int s = 0, int i = 0, double w = 1e9) : _s(s), _i(i),_weight(w) { }
+		i_j_s_weight(int i= 0 , int j = 0, int s = 0, double w = 1e9) :_i(i), _j(j), _s(s),_weight(w) { }
 
 	double _weight;
 	int _s;
 	int _i;
+	int _j;
+	int _step;
 	void set_s(int);
 	void set_i(int);
+	void set_j(int);
+	void set_step(int);
 	void set_w(double);
-	//void sort(s_i_weight*,int);
+	//void sort(i_j_s_weight*,int);
 	void clear();
 	//friend void build_weight(double**,int,Matrix,s_j_weight);
 

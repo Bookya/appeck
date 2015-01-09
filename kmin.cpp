@@ -145,12 +145,14 @@ void check_diagonal(Matrix &current,int step, vector<i_j_s_weight> &candidate)
 	for(int i=0;i<current._size;i++)
 	{
 		for(int s=0;s<current._k;s++)
-		if(current._array[i][i][s]!=1e9)
 		{
-			i_j_s_weight diag(i,i,s,current._array[i][i][s]);
-			diag.set_step(step);
-			candidate.push_back(diag);
-			current._array[i][i][s]=1e9;
+			if(current._array[i][i][s]!=1e9)
+			{
+				i_j_s_weight diag(i,i,s,current._array[i][i][s]);
+				diag.set_step(step);
+				candidate.push_back(diag);
+				current._array[i][i][s]=1e9;
+			}
 		}
 	}	
 }
