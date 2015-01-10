@@ -9,15 +9,13 @@ class Matrix
 		int _size;
 		double ***_array;
 		int _k;
-		//double **_sum;
-		//vector<vector <double> > kmin_vec;
-
+		vector<vector<vector<int> > > _path;
 		
 		void initial(int,int);
-		void build_weight(double**,Matrix&);
+		void build_weight(double**,Matrix&,int);
 		void build_zero(double**);
 		Matrix clone(); 
-		//Min_k_i(double,int,int);
+		
 
 		/*double mean();	
 		int k();
@@ -46,14 +44,15 @@ class i_j_s_weight
 	int _i;
 	int _j;
 	int _step;
+	vector<int> _path;
+
 	void set_s(int);
 	void set_i(int);
 	void set_j(int);
 	void set_step(int);
 	void set_w(double);
-	//void sort(i_j_s_weight*,int);
+	void set_path(vector<int>,int);
 	void clear();
-	//friend void build_weight(double**,int,Matrix,s_j_weight);
-
+	
 };
 
