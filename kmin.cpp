@@ -16,7 +16,6 @@ using namespace std;
 
 Matrix::Matrix()
 {
-	
 }
 void Matrix::initial(int Size, int K)
 {
