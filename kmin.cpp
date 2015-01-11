@@ -42,6 +42,10 @@ void Matrix::initial(int Size, int K)
 	for (int i = 0; i < _size; ++i) 
 	{
     	_path[i].resize(_size);
+		for (int j = 0; j < _size; ++j) 
+		{
+    		_path[i][j].resize(_size);
+		}
 	}
 
 }
@@ -54,8 +58,8 @@ void Matrix::build_zero(double **w)
 		for(int j=0;j<_size;j++)
 		{
 			_array[i][j][0]=w[i][j];
-			_path[i][j].push_back(j);//opposite
-			_path[i][j].push_back(i);
+			_path[i][j][0].push_back(j);//opposite
+			_path[i][j][0].push_back(i);
 		}
 	}
 }
@@ -112,7 +116,7 @@ void Matrix::build_weight(double **w, Matrix &pre, int step)
 						temp.set_j(j);
 						temp.set_s(s);
 						temp.set_step(step);
-						temp.set_path(pre._path[i][j],current_i);
+						temp.set_path(pre._path[i][j][s],current_i);
 						v.push_back(temp);
 					}
 				}
@@ -121,7 +125,10 @@ void Matrix::build_weight(double **w, Matrix &pre, int step)
 			for(int x=0;x<v.size()&&x<_k;x++)
 			{
 				_array[current_i][j][x]=v[x]._weight;
-				_path[current_i][j]=v[x]._path;
+				_path[current_i][j][x]=v[x]._path;
+				cout<<"path:";
+				for(int j=0;j<v[x]._path.size();j++)
+					cout<<v[x]._path[j]<<" ";
 				/*if(v[x]._weight!=1e9)
 				{
 				cout<<"i="<<current_i<<" j="<<j<<" ";
@@ -161,6 +168,8 @@ void check_diagonal(Matrix &current,int step, vector<i_j_s_weight> &candidate)
 			{
 				i_j_s_weight diag(i,i,s,current._array[i][i][s]);
 				diag.set_step(step);
+				reverse(current._path[i][i][s].begin(),current._path[i][i][s].end());
+				diag._path=current._path[i][i][s];
 				candidate.push_back(diag);
 				current._array[i][i][s]=1e9;
 			}
@@ -236,6 +245,8 @@ int main()
 	w[2][3] = -8;
 	w[3][2] = -8;
 	w[3][0] = 1;
+	w[0][2] = -7;
+	w[2][0] = -7;
 //    w[2][3] = 100;
 //    w[3][2] = 100;
 
@@ -272,7 +283,12 @@ int main()
 	}
 	for(int i=0;i<candidate.size();i++)
 	{
-		cout<<candidate[i]._weight<<" ";
+		cout<<"w="<<candidate[i]._weight<<" ";
+		//cout<<candidate[i]._path.size()<<" ";
+		cout<<"path:";
+		for(int j=0;j<candidate[i]._path.size();j++)
+			cout<<candidate[i]._path[j];
+		cout<<endl;
 	}
 
 }

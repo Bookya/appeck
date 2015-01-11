@@ -9,7 +9,7 @@ class Matrix
 		int _size;
 		double ***_array;
 		int _k;
-		vector<vector<vector<int> > > _path;
+		vector<vector<vector<vector<int> > > > _path;
 		
 		void initial(int,int);
 		void build_weight(double**,Matrix&,int);
