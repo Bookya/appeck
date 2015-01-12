@@ -14,7 +14,8 @@ class Matrix
 		void initial(int,int);
 		void build_weight(double**,Matrix&,int);
 		void build_zero(double**);
-		Matrix clone(); 
+		void clone(Matrix&);
+		void clear();
 		
 
 		/*double mean();	
@@ -52,7 +53,10 @@ class i_j_s_weight
 	void set_step(int);
 	void set_w(double);
 	void set_path(vector<int>,int);
-	void clear();
+	//void set_path(vector<int>);
+	void clear();	
+	int get_w(){return _weight;}
+	vector<int> get_path(){return _path;}
 	
 };
 
