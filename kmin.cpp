@@ -40,7 +40,7 @@ void sort(vector<i_j_s_weight >& v)
 }
 
 
-void Matrix::build_weight(double **w, Matrix &pre, int step)
+void Matrix::build_weight(double **w, Matrix &pre, int step)//move check_diagonal into here
 {
 	vector<i_j_s_weight> v;
 	i_j_s_weight temp;
@@ -55,7 +55,7 @@ void Matrix::build_weight(double **w, Matrix &pre, int step)
 				{
 					if(pre._array[i][j][s]!=1e9&&w[current_i][i]!=1e9)
 					{
-						temp.set_w(pre._array[i][j][s]+w[current_i][i]);//bug
+						temp.set_w(pre._array[i][j][s]+w[current_i][i]);
 						temp.set_i(i);
 						temp.set_j(j);
 						temp.set_s(s);
@@ -95,18 +95,27 @@ void get_k_min(vector<i_j_s_weight> &v ,int  k, vector<vector <int> > &loop)
 {
 	i_j_s_weight *min;
 	//double i_j_s_weight::*weight = &i_j_s_weight::_weight;
-	vector<int> i_j_s_weight::*path = &i_j_s_weight::_path;
+	//vector<int> i_j_s_weight::*path = &i_j_s_weight::_path;  why not???
 	vector<int> temp_loop;
-	min=&v[0];
-	for(int i=0;i<v.size();i++)
+	vector<double> weight;
+	while(true)
 	{
-		if(v[i+1]._weight<v[i]._weight)
-			min=&v[i+1];
-		cout<<min->get_w()<<" ";
+		temp_loop.clear();
+		min=&v[0];
+		for(int i=0;i<v.size();i++)
+		{
+			if(v[i+1]._weight<min->get_w())
+			{	
+				min=&v[i+1];
+			}
+		}
+		temp_loop=min->get_path();
+		weight.push_back(min->get_w());
+		min->clear();
+		loop.push_back(temp_loop);
+		if(loop.size()==k)
+			break;
 	}
-	temp_loop=min->get_path();
-
-	loop.push_back(temp_loop);
 }
 
 
@@ -127,6 +136,7 @@ void check_diagonal(Matrix &current,int step, vector<i_j_s_weight> &candidate)
 				diag._path=current._path[i][i][s];
 				candidate.push_back(diag);
 				current._array[i][i][s]=1e9;
+				current._path[i][i][s].clear();//question
 			}
 		}
 	}	
@@ -157,7 +167,8 @@ int main()
 	w[3][0] = 1;
 	w[0][2] = -7;
 	w[2][0] = -7;
-/*	w[0][1]=0;
+/*	
+w[0][1]=0;
 w[0][7]=0;
 w[1][2]=-1440;
 w[2][3]=0;
@@ -376,7 +387,7 @@ w[191][126]=-40;*/
 		cout<<endl;
 	}
 	//sort(candidate);
-	for(int i=0;i<candidate.size();i++)//change
+	/*for(int i=0;i<10;i++)//change
 	{
 		cout<<"w="<<candidate[i]._weight<<" ";
 		cout<<candidate[i]._path.size()<<" ";
@@ -384,5 +395,5 @@ w[191][126]=-40;*/
 		for(int j=0;j<candidate[i]._path.size();j++)
 			cout<<candidate[i]._path[j]<<" ";
 		cout<<endl;
-	}
+	}*/
 }
