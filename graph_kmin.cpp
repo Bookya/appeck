@@ -152,7 +152,6 @@ void build_graph(double **dir,int max)
 
 void print(vector<vector<int> > &lasso, vector<vector <int> > &loop)
 {
-	cout<<"lasso size="<<lasso.size()<<endl;
 	for(int i=0;i<lasso.size();i++)
 	{
 		cout<<"The "<<i<<" loop begins with ";;
@@ -164,9 +163,10 @@ void print(vector<vector<int> > &lasso, vector<vector <int> > &loop)
 		cout<<endl ;
 		cout<<"repeat loop:  ";	
 		for(int j=0;j<loop[i].size();j++)
-			{	
+		{	
 				cout<<loop[i][j]<<" ";
-			}		
+		}
+		loop[i].pop_back();		
 		cout<<endl ;
 	}
 }
@@ -485,10 +485,18 @@ int main(int argc, char *argv[])
 	cout<<"================"<<endl;
 	print(lasso,loop);
 
-	if(argv[3]!=NULL)
+	int loop_num = 0;;
+	int times =  0;
+	if(argv[4]!=NULL)
 	{
-		int loop_num = atoi(argv[3]);
-		int times = atoi(argv[4]);
+		loop_num = atoi(argv[4]);
+		times = atoi(argv[5]);
+		gen_adb(loop_num,times,lasso,loop);
+	}
+	else
+	{
+		cout<<"cin loop number and the repeat times:";
+		cin>>loop_num>>times;
 		gen_adb(loop_num,times,lasso,loop);
 	}
 	return 0;

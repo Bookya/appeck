@@ -94,14 +94,7 @@ void build_weight(Matrix &cur, double **w, Matrix &pre, int step)//move check_di
 
 void delete_repeat(vector<vector <int> >&loop)
 {
-
-	cout<<loop.size()<<endl ;
-	for(int i=0;i<loop.size();i++){
-		for(int j=0;j<loop[i].size();j++)
-			cout<<loop[i][j]<<" ";
-		cout<<endl ;
-	}
-	cout<<"=====delete_repeat_loops======="<<endl;
+	//cout<<"=====delete_repeat_loops======="<<endl;
 	
 	int latest=loop.size()-1;
 	int ele,i_ele,latest_ele,over_compare=0;
@@ -143,27 +136,13 @@ void delete_repeat(vector<vector <int> >&loop)
 			}
 		}
 	}
-	cout<<loop.size()<<endl ;
+	/*cout<<loop.size()<<endl ;
 	for(int i=0;i<loop.size();i++){
 		for(int j=0;j<loop[i].size();j++)
 			cout<<loop[i][j]<<" ";
 		cout<<endl ;
-	}
+	}*/
 }
-
-
-/*bool legal_path(i_j_s_weight &v)
-{
-	for(int i=0;i<v._path.size()-1;i++)
-	{
-		for(int j=i+1;j<v._path.size();j++)
-		{	
-			if(v._path[i]==v._path[j]&&i!=0&&j!=v._path.size()-1)
-				return false;
-		}		
-	}
-	return true;
-}*/
 
 void get_k_min(vector<i_j_s_weight> &v ,int  k, vector<vector <int> > &loop)
 {
