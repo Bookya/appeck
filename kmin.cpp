@@ -40,18 +40,18 @@ void sort(vector<i_j_s_weight >& v)
 }
 
 
-void Matrix::build_weight(double **w, Matrix &pre, int step)//move check_diagonal into here
+void build_weight(Matrix &cur, double **w, Matrix &pre, int step)//move check_diagonal into here
 {
 	vector<i_j_s_weight> v;
 	i_j_s_weight temp;
-	for(int j=0;j<_size;j++)
+	for(int j=0;j<pre._size;j++)
 	{	
-		for(int current_i=0;current_i<_size;current_i++)
+		for(int current_i=0;current_i<cur._size;current_i++)
 		{
 			v.clear();
-			for(int i=0;i<_size;i++)
+			for(int i=0;i<pre._size;i++)
 			{
-				for(int s=0;s<_k;s++)
+				for(int s=0;s<pre._k;s++)
 				{
 					if(pre._array[i][j][s]!=1e9&&w[current_i][i]!=1e9)
 					{
@@ -66,10 +66,10 @@ void Matrix::build_weight(double **w, Matrix &pre, int step)//move check_diagona
 				}
 			}
 			sort(v);
-			for(int x=0;x<v.size()&&x<_k;x++)
+			for(int x=0;x<v.size()&&x<cur._k;x++)
 			{
-				_array[current_i][j][x]=v[x]._weight;
-				_path[current_i][j][x]=v[x]._path;
+				cur._array[current_i][j][x]=v[x]._weight;
+				cur._path[current_i][j][x]=v[x]._path;
 				/*if(v[x]._weight!=1e9)
 				{
 					cout<<"i="<<current_i<<" ";
@@ -89,6 +89,59 @@ void Matrix::build_weight(double **w, Matrix &pre, int step)//move check_diagona
 	}
 }
 
+
+
+void delete_repeat(vector<vector <int> >&loop)
+{
+	for(int i=0;i<loop.size();i++)
+	{
+		int j=i+1;
+		int ele,m,k,t=0;
+		while(j<loop.size())
+		{
+			if(loop[i].size()==loop[j].size())
+			{
+				ele=0;
+				k=0;
+				t=0;
+				m=k+1;
+				while(ele<loop[j].size())
+				{	
+					if(loop[i][k]==loop[j][m])
+					{
+						if(ele==loop[j].size()-2)
+						{
+							loop.erase(loop.begin()+j);
+							break;
+						}
+						k=(k+1)%loop[j].size();
+						m=(m+1)%loop[j].size();
+						ele++;
+					}
+					else
+					{
+						m=(m+1)%loop[j].size();
+						t++;
+						ele=0;
+						if(t==loop[j].size()-1)
+						{
+							j++;
+							break;
+						}
+					}			
+				}
+			}
+			j++;
+		}
+	}
+	cout<<"=====delete_repeat_loops======="<<endl;
+	cout<<loop.size()<<endl ;
+	for(int i=0;i<loop.size();i++){
+		for(int j=0;j<loop[i].size();j++)
+			cout<<loop[i][j]<<" ";
+		cout<<endl ;
+	}
+}
 
 
 void get_k_min(vector<i_j_s_weight> &v ,int  k, vector<vector <int> > &loop)
@@ -113,10 +166,12 @@ void get_k_min(vector<i_j_s_weight> &v ,int  k, vector<vector <int> > &loop)
 		weight.push_back(min->get_w());
 		min->clear();
 		loop.push_back(temp_loop);
+		delete_repeat(loop);
 		if(loop.size()==k)
 			break;
 	}
 }
+
 
 
 void check_diagonal(Matrix &current,int step, vector<i_j_s_weight> &candidate)
@@ -373,7 +428,7 @@ w[191][126]=-40;*/
 	for(int i=2;i<V;i++)
 	{
 		previous.clone(current);
-		current.build_weight(w,previous,i);
+		build_weight(current,w,previous,i);
 		cout<<"build "<<i<<" table"<<endl;
 		check_diagonal(current,i,candidate);
 	}
