@@ -221,7 +221,7 @@ void check_diagonal(Matrix &current,int step, vector<i_j_s_weight> &candidate)
 	}	
 }
 
-
+/*
 int main()
 {
 	const int V = 192;
@@ -238,14 +238,14 @@ int main()
 		}
 	}
 
-	/*w[0][1] = -8;
+	w[0][1] = -8;
     w[1][0] = -8;
 	w[1][2] = 1;
 	w[2][3] = -8;
 	w[3][2] = -8;
 	w[3][0] = 1;
 	w[0][2] = -7;
-	w[2][0] = -7;*/
+	w[2][0] = -7;
 
 w[0][1]=0;
 w[0][7]=0;
@@ -466,7 +466,7 @@ w[191][126]=-40;
 		cout<<endl;
 	}
 	//sort(candidate);
-	/*for(int i=0;i<10;i++)//change
+	for(int i=0;i<10;i++)//change
 	{
 		cout<<"w="<<candidate[i]._weight<<" ";
 		cout<<candidate[i]._path.size()<<" ";
@@ -474,5 +474,5 @@ w[191][126]=-40;
 		for(int j=0;j<candidate[i]._path.size();j++)
 			cout<<candidate[i]._path[j]<<" ";
 		cout<<endl;
-	}*/
-}
+	}
+}*/
