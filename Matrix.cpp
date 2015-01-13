@@ -25,17 +25,23 @@ void Matrix::initial(int Size, int K)
 		}
 	}
 	_path.resize(_size);
+	_exist.resize(_size);
 	for (int i = 0; i < _size; ++i) 
 	{
     	_path[i].resize(_size);
+		_exist[i].resize(_size);
 		for (int j = 0; j < _size; ++j) 
 		{
     		_path[i][j].resize(_k);
+			_exist[i][j].resize(_k);
+			for (int k = 0; k < _k; ++k) 
+			{
+				_exist[i][j][k].resize(_size);
+			}
 		}
+		
 	}
 }
-
-
 
 void i_j_s_weight::set_path(vector<int> pre, int current_i)
 {
@@ -54,6 +60,8 @@ void Matrix::clone(Matrix &current )
 				_array[i][j][s]=current._array[i][j][s];
 				if(!current._path[i][j][s].empty())
 					_path[i][j][s]=current._path[i][j][s];
+				if(!current._exist[i][j][s].empty())
+					_exist[i][j][s]=current._exist[i][j][s];
 			}
 		}
 	}
@@ -89,6 +97,11 @@ Matrix::~Matrix()
 }
 
 
+void Matrix::set_exist(int i, int j, int s, int num)
+{
+	_exist[i][j][s][num]=1;
+
+}
 
 void Matrix::clear()
 {
@@ -100,6 +113,7 @@ void Matrix::clear()
 			{
 				_array[i][j][s]=1e9;
 				_path[i][j][s].clear();
+				_exist[i][j][s].clear();
 			}
 		}
 	}	
@@ -117,6 +131,7 @@ void Matrix::build_zero(double **w)
 			_array[i][j][0]=w[i][j];
 			_path[i][j][0].push_back(j);//opposite
 			_path[i][j][0].push_back(i);
+			_exist[i][j][0][i]=1;
 		}
 	}
 }

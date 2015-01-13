@@ -10,13 +10,13 @@ class Matrix
 		double ***_array;
 		int _k;
 		vector<vector<vector<vector<int> > > > _path;
+		vector<vector<vector<vector<int> > > > _exist;
 		
 		void initial(int,int);
-		void build_weight(double**,Matrix&,int);
 		void build_zero(double**);
 		void clone(Matrix&);
 		void clear();
-		
+		void set_exist(int,int,int,int);
 
 		/*double mean();	
 		int k();

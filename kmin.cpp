@@ -53,14 +53,15 @@ void build_weight(Matrix &cur, double **w, Matrix &pre, int step)//move check_di
 			{
 				for(int s=0;s<pre._k;s++)
 				{
-					if(pre._array[i][j][s]!=1e9&&w[current_i][i]!=1e9)
+					if(pre._array[i][j][s]!=1e9&&w[current_i][i]!=1e9&&pre._exist[i][j][s][current_i]==0)
 					{
+						pre.set_exist(i,j,s,current_i);
+						temp.set_path(pre._path[i][j][s],current_i);
 						temp.set_w(pre._array[i][j][s]+w[current_i][i]);
 						temp.set_i(i);
 						temp.set_j(j);
 						temp.set_s(s);
 						temp.set_step(step);
-						temp.set_path(pre._path[i][j][s],current_i);
 						v.push_back(temp);
 					}
 				}
@@ -93,48 +94,55 @@ void build_weight(Matrix &cur, double **w, Matrix &pre, int step)//move check_di
 
 void delete_repeat(vector<vector <int> >&loop)
 {
-	for(int i=0;i<loop.size();i++)
+
+	cout<<loop.size()<<endl ;
+	for(int i=0;i<loop.size();i++){
+		for(int j=0;j<loop[i].size();j++)
+			cout<<loop[i][j]<<" ";
+		cout<<endl ;
+	}
+	cout<<"=====delete_repeat_loops======="<<endl;
+	
+	int latest=loop.size()-1;
+	int ele,i_ele,latest_ele,over_compare=0;
+	for(int i=0;i<loop.size()-1;i++)
 	{
-		int j=i+1;
-		int ele,m,k,t=0;
-		while(j<loop.size())
+		if(loop[i].size()==loop[latest].size())
 		{
-			if(loop[i].size()==loop[j].size())
+			over_compare=0;
+			ele=0;
+			i_ele=0;
+			latest_ele=0;
+			while(true)
 			{
-				ele=0;
-				k=0;
-				t=0;
-				m=k+1;
-				while(ele<loop[j].size())
-				{	
-					if(loop[i][k]==loop[j][m])
+				
+				if(loop[i][i_ele]==loop[latest][latest_ele])
+				{
+					//cout<<"size="<<loop[latest].size()<<" "<<loop[i][i_ele]<<" "<<loop[latest][latest_ele]<<endl ;
+					if(ele==loop[latest].size()-1)
 					{
-						if(ele==loop[j].size()-2)
-						{
-							loop.erase(loop.begin()+j);
-							break;
-						}
-						k=(k+1)%loop[j].size();
-						m=(m+1)%loop[j].size();
-						ele++;
+						loop.erase(loop.begin()+latest);
+						break;
 					}
 					else
 					{
-						m=(m+1)%loop[j].size();
-						t++;
-						ele=0;
-						if(t==loop[j].size()-1)
-						{
-							j++;
-							break;
-						}
-					}			
+						i_ele=(i_ele+1)%(loop[i].size()-1);
+						latest_ele=(latest_ele+1)%(loop[latest].size()-1);
+						ele++;
+					}
+				}
+				else
+				{
+					//cout<<"diff:"<<loop[i][i_ele]<<" "<<loop[latest][latest_ele]<<endl;
+					latest_ele=(latest_ele+1)%(loop[latest].size()-1);
+					ele=0;
+					over_compare++;
+					if(over_compare==loop[i].size()-1)
+						break;
 				}
 			}
-			j++;
 		}
 	}
-	cout<<"=====delete_repeat_loops======="<<endl;
 	cout<<loop.size()<<endl ;
 	for(int i=0;i<loop.size();i++){
 		for(int j=0;j<loop[i].size();j++)
@@ -143,6 +151,19 @@ void delete_repeat(vector<vector <int> >&loop)
 	}
 }
 
+
+/*bool legal_path(i_j_s_weight &v)
+{
+	for(int i=0;i<v._path.size()-1;i++)
+	{
+		for(int j=i+1;j<v._path.size();j++)
+		{	
+			if(v._path[i]==v._path[j]&&i!=0&&j!=v._path.size()-1)
+				return false;
+		}		
+	}
+	return true;
+}*/
 
 void get_k_min(vector<i_j_s_weight> &v ,int  k, vector<vector <int> > &loop)
 {
@@ -162,11 +183,14 @@ void get_k_min(vector<i_j_s_weight> &v ,int  k, vector<vector <int> > &loop)
 				min=&v[i+1];
 			}
 		}
-		temp_loop=min->get_path();
-		weight.push_back(min->get_w());
-		min->clear();
-		loop.push_back(temp_loop);
-		delete_repeat(loop);
+		//if(legal_path(*min))
+		//{
+			temp_loop=min->get_path();
+			weight.push_back(min->get_w());
+			min->clear();
+			loop.push_back(temp_loop);
+			delete_repeat(loop);
+		//}
 		if(loop.size()==k)
 			break;
 	}
@@ -200,8 +224,8 @@ void check_diagonal(Matrix &current,int step, vector<i_j_s_weight> &candidate)
 
 int main()
 {
-	const int V = 5;
-	int k=3;
+	const int V = 192;
+	int k=5;
 	double **w;
 	
 	w= new double *[V];
@@ -214,15 +238,15 @@ int main()
 		}
 	}
 
-	w[0][1] = -8;
+	/*w[0][1] = -8;
     w[1][0] = -8;
 	w[1][2] = 1;
 	w[2][3] = -8;
 	w[3][2] = -8;
 	w[3][0] = 1;
 	w[0][2] = -7;
-	w[2][0] = -7;
-/*	
+	w[2][0] = -7;*/
+
 w[0][1]=0;
 w[0][7]=0;
 w[1][2]=-1440;
@@ -414,7 +438,7 @@ w[183][2]=-78;
 w[185][122]=1636;
 w[187][16]=-1788;
 w[189][124]=-95;
-w[191][126]=-40;*/
+w[191][126]=-40;
 	
 	Matrix current;
 	current.initial(V,k);
