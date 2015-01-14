@@ -155,7 +155,7 @@ void print(vector<vector<int> > &lasso, vector<vector <int> > &loop)
 	for(int i=0;i<lasso.size();i++)
 	{
 		cout<<"The "<<i<<" loop begins with ";;
-		for(int j=0;j<lasso[i].size()-1;j++)
+		for(int j=0;j<lasso[i].size();j++)
 		{	
 			cout<<lasso[i][j]<<" ";
 		}	
@@ -265,10 +265,10 @@ void find_lasso(double **dirnew, vector< vector <int> >&lasso,vector< vector<int
 		{
 			visit[j] =false ;
 		}
-		/*for(int j=0;j<loop[i].size();j++)
+		for(int j=0;j<loop[i].size();j++)
 		{
 			visit[loop[i][j]]=true;
-		}*/
+		}
 		DFS_lasso(all_lasso,loop,0,0,visit,dirnew,temp_lasso,max,i);
 		/*for(int j=0;j<all_lasso[1].size();j++)
 			cout<<all_lasso[1][j]<<" ";
@@ -406,11 +406,26 @@ void gen_adb(int loop_num, int times, vector<vector <int> >output, vector<vector
 	ofstream os;
 	os.open("loop",std::ofstream::out);
 	vector<int> adb;
+	int start=0;
 	for(int j=0;j<output[loop_num].size()-1;j++)
 	{	
 		adb.push_back(output[loop_num][j]);	
 	}
+	start = loop[loop_num][output[loop_num].size()-1] ;
 	adb.push_back(-1);
+	for(int s=0;s<loop[loop_num].size();s++)
+	{
+		if(start==loop[loop_num][s])
+		{
+			while(s<loop[loop_num].size())
+			{
+				s++;
+				adb.push_back(loop[loop_num][s]);
+			}
+			break;
+		}
+		
+	}
 	for(int k=0;k<times;k++)
 	{
 		for(int j=0;j<loop[loop_num].size();j++)
