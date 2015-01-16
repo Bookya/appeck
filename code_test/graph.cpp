@@ -261,25 +261,6 @@ void print(vector<vector<int> > &lasso, vector<vector <int> > &loop)
 			}		
 		cout<<endl ;
 	}
-	ofstream os;
-	os.open("all_loop",std::ofstream::out);
-	for(int i=0;i<lasso.size();i++)
-	{
-		os<<"The "<<i<<" loop begins with ";;
-		for(int j=0;j<lasso[i].size()-1;j++)
-		{	
-			os<<lasso[i][j]<<" ";
-		}	
-				
-		os<<endl ;
-		os<<"repeat loop:  ";	
-		for(int j=0;j<loop[i].size();j++)
-			{	
-				os<<loop[i][j]<<" ";
-			}		
-		os<<endl ;
-	}
-	os.close();
 }
 
 
@@ -412,11 +393,11 @@ void delete_loop(vector<vector <int> >output, vector<vector <int> >&loop, int ma
 {
     vector <int> temp;
 	cout<<"=====find_all_loops====="<<endl;
-	/*for(int i=0;i<loop.size();i++){
+	for(int i=0;i<loop.size();i++){
 		for(int j=0;j<loop[i].size();j++)
 			cout<<loop[i][j]<<" ";
 		cout<<endl ;
-	}	*/
+	}	
 	for (int i=0 ; i < loop.size() ; i++) 
 	{
 		int j=i+1;
@@ -445,12 +426,12 @@ void delete_loop(vector<vector <int> >output, vector<vector <int> >&loop, int ma
 		}
 		
 	}
-	/*cout<<loop.size()<<endl ;
+	cout<<loop.size()<<endl ;
 	for(int i=0;i<loop.size();i++){
 		for(int j=0;j<loop[i].size();j++)
 			cout<<loop[i][j]<<" ";
 		cout<<endl ;
-	}*/
+	}
 	
 }
 void delete_repeat(vector<vector <int> >&loop)
@@ -497,12 +478,12 @@ void delete_repeat(vector<vector <int> >&loop)
 		}
 	}
 	cout<<"=====delete_repeat_loops======="<<endl;
-	/*cout<<loop.size()<<endl ;
+	cout<<loop.size()<<endl ;
 	for(int i=0;i<loop.size();i++){
 		for(int j=0;j<loop[i].size();j++)
 			cout<<loop[i][j]<<" ";
 		cout<<endl ;
-	}*/
+	}
 }
 void DFS_loop(vector<vector <int> >&output,int i,int j,bool *visit,int*A,vector<int>& temp,int max)
 {
@@ -567,7 +548,6 @@ void find_lasso(int *dirnew, vector< vector <int> >&lasso,vector< vector<int> > 
 	int all_lasso_size=0;
 	int shortest=0;
 	bool visit[max+1];
-	cout<<"=====find_all_lasso====="<<endl;
 	for(int i=0;i<loop.size();i++)
 	{
 		if(!all_lasso.empty())
@@ -585,40 +565,91 @@ void find_lasso(int *dirnew, vector< vector <int> >&lasso,vector< vector<int> > 
 		
 		all_lasso_size=all_lasso[0].size();	
 		shortest=0;
-		
+		cout<<"=====find_all_lasso====="<<endl;
 		for(int j=0;j<all_lasso.size();j++)
 		{
 			for(int k=0;k<all_lasso[j].size();k++)
 			{
-				//cout<<all_lasso[j][k]<<" ";
+				cout<<all_lasso[j][k]<<" ";
 			}
 			if(all_lasso[j].size() <= all_lasso_size)
 				{
 					all_lasso_size=all_lasso[j].size();
 					shortest=j;
 				}
-			//cout<<endl ;
+			cout<<endl ;
 
 		}
 		lasso.push_back(all_lasso[shortest]);
 	}
 }
+/*
+void min_mean_cycle(int* dir)
+{
+    for (int i=0; i<V+1; ++i)
+        for (int j=0; j<V; ++j)
+            d[i][j] = 1e9;
+ 
+	for(int i=0;i<V;i++){
+		for(int j=0;j<V;j++){
+			w[i][j]=i-j ;
+		}
+	}
+    int s = V;
+    for (int i=0; i<V; ++i)
+        w[s][i] = 0;
+ 
+    d[0][s] = 0;
+    for (int k=0; k<V; ++k){
+        for (int i=0; i<=V; ++i){
+            for (int j=0; j<=V; ++j){
+                if (d[k][i] + w[i][j] < d[k+1][j]){
+                    d[k+1][j] = d[k][i] + w[i][j];
+					//cout<<"k+1 = "<<k+1<<"  "<<d[k+1][j]<<endl;
+				}
+			}
+		}
+	}
+	for(int i=0;i<V;i++){
+		for(int j=0;j<V;j++){
+
+			cout<<d[i][j]<<" ";
+		}
+		cout<<endl ;
+	}
+ 
+    double mean = 1e9;
+    for (int i=0; i<V-1; ++i)
+    {
+        if (d[V][i] == 1e9) continue;
+ 
+        double maxw = -1e9;
+        for (int k=0; k<V-1; ++k){
+			cout<< (d[V][i] - d[k][i]) / (V - k) <<endl ;           
+			maxw = max(maxw, (d[V][i] - d[k][i]) / (V - k));
+		}
+        mean = min(mean, maxw);
+    }
+ 
+    if (mean == 1e9)
+        cout << "平均權重無限大";
+    else
+        cout << "平均權重為" << mean;
+}
+*/
 int main(int argc, char *argv[])
 {	
 	char* file=argv[1];
 	int max=find_max(file);
 	char* limit = argv[2];
 	vector <int> inc, exc ;
-	cout<<"execute"<<endl;
-	LimitNode(limit,inc,exc) ;
-	cout<<"limit_Node"<<endl;
+	LimitNode(limit,inc,exc) ;	
 	int dir[max+1][max+1];
 	//int **dir = (int**)new2d(max+1,max+1,sizeof(int)); //???
 	vector <int> temp ;
 	vector <vector <int> > output , loop , lasso;	
 	memset(dir,0,sizeof(dir));
 	build_graph(*dir,max);
-	cout<<"build graph"<<endl;
 	int dirnew[max+1][max+1];
 	memset(dirnew,0,sizeof(dirnew));
 	copy(*dir,*dirnew,max);
@@ -627,8 +658,7 @@ int main(int argc, char *argv[])
 		visit[i] =false;
 	}
 	CancelNode(*dir,exc,max);//new
-	cout<<"cancel node"<<endl;
-	DFS_loop(output,0,0,visit,*dir,temp,max);
+	DFS_loop(output,inc[0],0,visit,*dir,temp,max);
 	LimitLoop(output,*dir,temp,max,inc,exc,loop);  //delete what we don't want
 	delete_loop(output,loop,max);
 	delete_repeat(loop);
@@ -668,5 +698,5 @@ int main(int argc, char *argv[])
 
 	is.close();*/
 
-	return 0;
+
 }
