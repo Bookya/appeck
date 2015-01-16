@@ -1,0 +1,515 @@
+Move1: 
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 4
+[D][clickViewLocal] pstView [8, 161] [472, 193], click point: (126, 184)
+[D][getNextMove] Click point (126, 184) on View [Delayed]
+Move2: Thu Jan 15 04:16:48 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 0
+[D][InputSystemKey] system key: 82
+[D][getNextMove] Input keycode (82) to system
+Move3: Thu Jan 15 04:17:10 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 0
+[D][clickViewLocal] pstView [115, 757] [365, 854], click point: (148, 782)
+[D][getNextMove] Click point (148, 782) on View at rect (115, 757)-(365, 854)
+Move4: Thu Jan 15 04:17:33 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 1
+[D][clickViewLocal] pstView [0, 73] [480, 854], click point: (391, 773)
+[D][getNextMove] Click point (391, 773) on View at rect (0, 73)-(480, 854)
+Move5: Thu Jan 15 04:17:55 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 1
+[D][clickViewLocal] pstView [0, 73] [480, 854], click point: (259, 543)
+[D][getNextMove] Click point (259, 543) on View at rect (0, 73)-(480, 854)
+Move6: Thu Jan 15 04:18:19 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 0
+[D][clickViewLocal] pstView [0, 25] [123, 73], click point: (14, 48)
+[D][getNextMove] Click point (14, 48) on View with hint [Navigate up]
+Move7: Thu Jan 15 04:18:53 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 2
+[D][clickViewLocal] pstView [368, 25] [424, 73], click point: (375, 41)
+[D][getNextMove] Click point (375, 41) on View with hint [Transfer]
+Move8: Thu Jan 15 04:19:15 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 0
+[D][InputSystemKey] system key: 66
+[D][getNextMove] Input text (Zn) on View at rect (72, 423)-(408, 463)
+[D][getNextMove] Input keycode (66) to system
+Move9: Thu Jan 15 04:19:41 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 1
+[D][InputSystemKey] system key: 66
+[D][getNextMove] Input text (\]ccS) on View at rect (72, 463)-(408, 503)
+[D][getNextMove] Input keycode (66) to system
+Move10: Thu Jan 15 04:20:14 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 0
+[W]Ignore character & which is not supported by Android.
+[W]Ignore character _ which is not supported by Android.
+[D][InputSystemKey] system key: 66
+[D][getNextMove] Input text (meM[ lF) on View at rect (72, 423)-(408, 463)
+[D][getNextMove] Input keycode (66) to system
+Move11: Thu Jan 15 04:20:49 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 0
+[D][clickViewLocal] pstView [72, 423] [408, 463], click point: (377, 457)
+[D][getNextMove] Long click point (377, 457) on View at rect (72, 423)-(408, 463)
+Move12: Thu Jan 15 04:21:10 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 1
+[W]Ignore character ? which is not supported by Android.
+[W]Ignore character $ which is not supported by Android.
+[D][InputSystemKey] system key: 66
+[D][getNextMove] Input text (z3+4/rp, `A#D*C) on View at rect (72, 463)-(408, 503)
+[D][getNextMove] Input keycode (66) to system
+Move13: Thu Jan 15 04:22:03 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 3, nViewIndex: 1
+[D][ScrollView] scroll from (287, 386) to (384, 384)!
+[D][getNextMove] Scroll from (287, 386) to (384, 384) on View at rect (256, 383)-(408, 423)
+Move14: Thu Jan 15 04:22:25 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 0
+[D][InputSystemKey] system key: 82
+[D][getNextMove] Input keycode (82) to system
+Move15: Thu Jan 15 04:22:47 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 3, nViewIndex: 1
+[D][ScrollView] scroll from (336, 401) to (289, 400)!
+[D][getNextMove] Scroll from (336, 401) to (289, 400) on View at rect (256, 383)-(408, 423)
+Move16: Thu Jan 15 04:23:08 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 4, nViewIndex: 0
+[D][clickViewLocal] pstView [260, 423] [392, 471], click point: (329, 460)
+[D][getNextMove] Click point (329, 460) on View [Bills]
+Move17: Thu Jan 15 04:23:34 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 4
+[D][clickViewLocal] pstView [64, 512] [239, 566], click point: (190, 553)
+[D][getNextMove] Click point (190, 553) on View [Cancel]
+Move18: Thu Jan 15 04:23:56 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 3
+[D][clickViewLocal] pstView [8, 137] [472, 183], click point: (87, 161)
+[D][getNextMove] Long click point (87, 161) on View at rect (8, 137)-(472, 183)
+Move19: Thu Jan 15 04:24:20 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 6
+[D][clickViewLocal] pstView [0, 73] [480, 137], click point: (68, 134)
+[D][getNextMove] Click point (68, 134) on View at rect (0, 73)-(480, 137)
+Move20: Thu Jan 15 04:24:42 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 3
+[D][clickViewLocal] pstView [424, 25] [480, 73], click point: (431, 53)
+[D][getNextMove] Long click point (431, 53) on View with hint [Change color]
+Move21: Thu Jan 15 04:25:03 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 5, nViewIndex: 0
+[D][InputSystemKey] system key: 4
+[D][getNextMove] Input keycode (4) to system
+Move22: Thu Jan 15 04:25:25 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 7
+[D][clickViewLocal] pstView [8, 245] [472, 291], click point: (168, 256)
+[D][getNextMove] Click point (168, 256) on View at rect (8, 245)-(472, 291)
+Move23: Thu Jan 15 04:25:47 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 5
+[D][clickViewLocal] pstView [0, 73] [480, 854], click point: (209, 822)
+[D][getNextMove] Click point (209, 822) on View at rect (0, 73)-(480, 854)
+Move24: Thu Jan 15 04:26:08 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 1
+[D][clickViewLocal] pstView [312, 25] [368, 73], click point: (328, 65)
+[D][getNextMove] Long click point (328, 65) on View with hint [Spend]
+Move25: Thu Jan 15 04:26:31 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 0
+[W]Ignore character ! which is not supported by Android.
+[W]Ignore character } which is not supported by Android.
+[W]Ignore character " which is not supported by Android.
+[D][InputSystemKey] system key: 66
+[D][getNextMove] Input text (=#.4`C+NQ=A3') on View at rect (72, 387)-(408, 427)
+[D][getNextMove] Input keycode (66) to system
+Move26: Thu Jan 15 04:27:23 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 3
+[D][clickViewLocal] pstView [64, 508] [239, 562], click point: (155, 533)
+[D][getNextMove] Click point (155, 533) on View [Cancel]
+Move27: Thu Jan 15 04:27:44 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 5, nViewIndex: 0
+[D][InputSystemKey] system key: 4
+[D][getNextMove] Input keycode (4) to system
+Move28: Thu Jan 15 04:28:05 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 4, nViewIndex: 2
+[D][clickViewLocal] pstView [8, 245] [287, 291], click point: (156, 260)
+[D][getNextMove] Click point (156, 260) on View [Food]
+Move29: Thu Jan 15 04:28:28 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 1
+[D][InputSystemKey] system key: 82
+[D][getNextMove] Input keycode (82) to system
+Move30: Thu Jan 15 04:28:49 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 1
+[D][clickViewLocal] pstView [49, 29] [312, 69], click point: (247, 66)
+[D][getNextMove] Click point (247, 66) on View at rect (49, 29)-(312, 69)
+Move31: Thu Jan 15 04:29:10 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 2
+[D][clickViewLocal] pstView [312, 25] [368, 73], click point: (337, 63)
+[D][getNextMove] Click point (337, 63) on View with hint [Spend]
+Move32: Thu Jan 15 04:29:32 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 4
+[D][clickViewLocal] pstView [240, 508] [416, 562], click point: (361, 523)
+[D][getNextMove] Click point (361, 523) on View [OK]
+Move33: Thu Jan 15 04:29:53 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 4
+[D][clickViewLocal] pstView [240, 508] [416, 562], click point: (336, 522)
+[D][getNextMove] Click point (336, 522) on View [OK]
+Move34: Thu Jan 15 04:30:15 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 2
+[D][InputSystemKey] system key: 82
+[D][getNextMove] Input keycode (82) to system
+Move35: Thu Jan 15 04:30:36 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 3
+[D][clickViewLocal] pstView [64, 508] [239, 562], click point: (197, 541)
+[D][getNextMove] Click point (197, 541) on View [Cancel]
+Move36: Thu Jan 15 04:30:57 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 0
+[D][InputSystemKey] system key: 66
+[D][getNextMove] Input text (2) on View at rect (49, 29)-(312, 69)
+[D][getNextMove] Input keycode (66) to system
+Move37: Thu Jan 15 04:31:21 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 2
+[D][clickViewLocal] pstView [312, 25] [368, 73], click point: (318, 30)
+[D][getNextMove] Click point (318, 30) on View with hint [Spend]
+Move38: Thu Jan 15 04:31:42 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 2
+[D][clickViewLocal] pstView [72, 467] [408, 499], click point: (377, 496)
+[D][getNextMove] Click point (377, 496) on View [Delayed]
+Move39: Thu Jan 15 04:32:05 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 1
+[D][clickViewLocal] pstView [72, 427] [408, 467], click point: (202, 440)
+[D][getNextMove] Click point (202, 440) on View at rect (72, 427)-(408, 467)
+Move40: Thu Jan 15 04:32:29 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 8
+[D][clickViewLocal] pstView [204, 323] [268, 389], click point: (233, 336)
+[D][getNextMove] Long click point (233, 336) on View [16]
+Move41: Thu Jan 15 04:32:51 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 7
+[D][clickViewLocal] pstView [204, 323] [268, 389], click point: (235, 356)
+[D][getNextMove] Long click point (235, 356) on View [17]
+Move42: Thu Jan 15 04:33:13 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 8
+[D][clickViewLocal] pstView [284, 209] [348, 275], click point: (301, 260)
+[D][getNextMove] Long click point (301, 260) on View [2014]
+Move43: Thu Jan 15 04:33:34 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 4
+[D][clickViewLocal] pstView [124, 286] [188, 311], click point: (177, 302)
+[D][getNextMove] Long click point (177, 302) on View at rect (124, 286)-(188, 311)
+Move44: Thu Jan 15 04:33:56 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 8
+[D][clickViewLocal] pstView [284, 209] [348, 275], click point: (318, 274)
+[D][getNextMove] Long click point (318, 274) on View [2013]
+Move45: Thu Jan 15 04:34:17 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 3
+[D][InputSystemKey] system key: 82
+[D][getNextMove] Input keycode (82) to system
+Move46: Thu Jan 15 04:34:39 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 3, nViewIndex: 1
+[D][ScrollView] scroll from (247, 265) to (241, 347)!
+[D][getNextMove] Scroll from (247, 265) to (241, 347) on View at rect (204, 209)-(268, 389)
+Move47: Thu Jan 15 04:34:59 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 5
+[D][clickViewLocal] pstView [124, 209] [188, 275], click point: (183, 218)
+[D][getNextMove] Click point (183, 218) on View [Dec]
+Move48: Thu Jan 15 04:35:21 UTC+0800 2015
+Move49: Thu Jan 15 04:35:41 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 9
+[D][clickViewLocal] pstView [284, 323] [348, 389], click point: (323, 355)
+[D][getNextMove] Long click point (323, 355) on View [2014]
+Move50: Thu Jan 15 04:36:13 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 3, nViewIndex: 1
+[D][InputSystemKey] system key: 82
+[D][getNextMove] Input keycode (82) to system
+Move51: Thu Jan 15 04:36:34 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 5, nViewIndex: 0
+[D][InputSystemKey] system key: 4
+[D][getNextMove] Input keycode (4) to system
+Move52: Thu Jan 15 04:36:56 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 3
+[D][clickViewLocal] pstView [424, 25] [480, 73], click point: (470, 25)
+[D][getNextMove] Long click point (470, 25) on View with hint [Change color]
+Move53: Thu Jan 15 04:37:17 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 1
+[D][clickViewLocal] pstView [312, 25] [368, 73], click point: (317, 37)
+[D][getNextMove] Long click point (317, 37) on View with hint [Spend]
+Move54: Thu Jan 15 04:37:39 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 2
+[D][clickViewLocal] pstView [72, 467] [408, 499], click point: (225, 497)
+[D][getNextMove] Click point (225, 497) on View [Delayed]
+Move55: Thu Jan 15 04:38:01 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 0
+[D][clickViewLocal] pstView [72, 387] [408, 427], click point: (161, 423)
+[D][getNextMove] Long click point (161, 423) on View at rect (72, 387)-(408, 427)
+Move56: Thu Jan 15 04:38:22 UTC+0800 2015
+Move57: Thu Jan 15 04:38:42 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 4
+[D][clickViewLocal] pstView [124, 286] [188, 311], click point: (138, 301)
+[D][getNextMove] Long click point (138, 301) on View at rect (124, 286)-(188, 311)
+Move58: Thu Jan 15 04:39:04 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 4
+[D][clickViewLocal] pstView [124, 286] [188, 311], click point: (169, 297)
+[D][getNextMove] Long click point (169, 297) on View at rect (124, 286)-(188, 311)
+Move59: Thu Jan 15 04:39:27 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 6
+[D][clickViewLocal] pstView [204, 209] [268, 275], click point: (263, 265)
+[D][getNextMove] Long click point (263, 265) on View [14]
+Move60: Thu Jan 15 04:39:50 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 8
+[D][clickViewLocal] pstView [284, 209] [348, 275], click point: (312, 266)
+[D][getNextMove] Long click point (312, 266) on View [2014]
+Move61: Thu Jan 15 04:40:12 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 0
+[W]Ignore character ^ which is not supported by Android.
+[W]Ignore character & which is not supported by Android.
+[W]Ignore character > which is not supported by Android.
+[W]Ignore character _ which is not supported by Android.
+[D][InputSystemKey] system key: 66
+[D][getNextMove] Input text (ttNHah-3.'6lY) on View at rect (8, 81)-(472, 121)
+[D][getNextMove] Input keycode (66) to system
+Move62: Thu Jan 15 04:41:09 UTC+0800 2015
+Move63: Thu Jan 15 04:41:31 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 0
+[D][InputSystemKey] system key: 66
+[D][getNextMove] Input text (,3c) on View at rect (8, 81)-(472, 121)
+[D][getNextMove] Input keycode (66) to system
+Move64: Thu Jan 15 04:41:58 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 3
+[D][InputSystemKey] system key: 82
+[D][getNextMove] Input keycode (82) to system
+Move65: Thu Jan 15 04:42:18 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 3
+[D][InputSystemKey] system key: 82
+[D][getNextMove] Input keycode (82) to system
+Move66: Thu Jan 15 04:42:40 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 0
+[D][clickViewLocal] pstView [0, 25] [107, 73], click point: (105, 57)
+[D][getNextMove] Click point (105, 57) on View with hint [Navigate up]
+Move67: Thu Jan 15 04:43:01 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 5
+[D][InputSystemKey] system key: 82
+[D][getNextMove] Input keycode (82) to system
+Move68: Thu Jan 15 04:43:22 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 1
+[D][clickViewLocal] pstView [49, 29] [312, 69], click point: (68, 34)
+[D][getNextMove] Click point (68, 34) on View at rect (49, 29)-(312, 69)
+Move69: Thu Jan 15 04:43:43 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 3
+[D][clickViewLocal] pstView [424, 25] [480, 73], click point: (440, 26)
+[D][getNextMove] Long click point (440, 26) on View with hint [Change color]
+Move70: Thu Jan 15 04:44:03 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 5
+[D][clickViewLocal] pstView [0, 73] [480, 854], click point: (259, 558)
+[D][getNextMove] Click point (259, 558) on View at rect (0, 73)-(480, 854)
+Move71: Thu Jan 15 04:44:24 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 4
+[D][clickViewLocal] pstView [424, 25] [480, 73], click point: (448, 62)
+[D][getNextMove] Click point (448, 62) on View with hint [Change color]
+Move72: Thu Jan 15 04:44:45 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 5
+[D][clickViewLocal] pstView [0, 73] [480, 854], click point: (446, 423)
+[D][getNextMove] Click point (446, 423) on View at rect (0, 73)-(480, 854)
+Move73: Thu Jan 15 04:45:05 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 1
+[D][clickViewLocal] pstView [49, 29] [312, 69], click point: (299, 30)
+[D][getNextMove] Click point (299, 30) on View at rect (49, 29)-(312, 69)
+Move74: Thu Jan 15 04:45:26 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 2
+[D][clickViewLocal] pstView [312, 25] [368, 73], click point: (342, 37)
+[D][getNextMove] Click point (342, 37) on View with hint [Spend]
+Move75: Thu Jan 15 04:45:46 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 0
+[D][clickViewLocal] pstView [72, 387] [408, 427], click point: (222, 422)
+[D][getNextMove] Click point (222, 422) on View at rect (72, 387)-(408, 427)
+Move76: Thu Jan 15 04:46:07 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 1
+[D][clickViewLocal] pstView [72, 427] [408, 467], click point: (298, 456)
+[D][getNextMove] Click point (298, 456) on View at rect (72, 427)-(408, 467)
+Move77: Thu Jan 15 04:46:28 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 0
+[D][clickViewLocal] pstView [72, 387] [408, 427], click point: (215, 408)
+[D][getNextMove] Click point (215, 408) on View at rect (72, 387)-(408, 427)
+Move78: Thu Jan 15 04:46:49 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 4
+[D][clickViewLocal] pstView [240, 508] [416, 562], click point: (414, 533)
+[D][getNextMove] Click point (414, 533) on View [OK]
+Move79: Thu Jan 15 04:47:10 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 3
+[D][clickViewLocal] pstView [64, 508] [239, 562], click point: (132, 513)
+[D][getNextMove] Click point (132, 513) on View [Cancel]
+Move80: Thu Jan 15 04:47:31 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 0
+[D][clickViewLocal] pstView [49, 29] [312, 69], click point: (257, 64)
+[D][getNextMove] Long click point (257, 64) on View at rect (49, 29)-(312, 69)
+Move81: Thu Jan 15 04:47:51 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 5
+[D][clickViewLocal] pstView [0, 73] [480, 854], click point: (233, 645)
+[D][getNextMove] Click point (233, 645) on View at rect (0, 73)-(480, 854)
+Move82: Thu Jan 15 04:48:12 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 3
+[D][clickViewLocal] pstView [424, 25] [480, 73], click point: (431, 31)
+[D][getNextMove] Long click point (431, 31) on View with hint [Change color]
+Move83: Thu Jan 15 04:48:32 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 5, nViewIndex: 0
+[D][InputSystemKey] system key: 4
+[D][getNextMove] Input keycode (4) to system
+Move84: Thu Jan 15 04:48:53 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 4
+[D][InputSystemKey] system key: 82
+[D][getNextMove] Input keycode (82) to system
+Move85: Thu Jan 15 04:49:14 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 5, nViewIndex: 0
+[D][InputSystemKey] system key: 82
+[D][getNextMove] Input keycode (82) to system
+Move86: Thu Jan 15 04:49:35 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 4
+[D][clickViewLocal] pstView [0, 137] [480, 291], click point: (293, 281)
+[D][getNextMove] Click point (293, 281) on View at rect (0, 137)-(480, 291)
+Move87: Thu Jan 15 04:49:57 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 0
+[W]Ignore character | which is not supported by Android.
+[D][InputSystemKey] system key: 66
+[D][getNextMove] Input text (XbIlpc un8Uz0t=+hzBr=e,bz90m) on View at rect (49, 29)-(312, 69)
+[D][getNextMove] Input keycode (66) to system
+Move88: Thu Jan 15 04:51:05 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 1
+[D][clickViewLocal] pstView [49, 29] [312, 69], click point: (142, 34)
+[D][getNextMove] Click point (142, 34) on View at rect (49, 29)-(312, 69)
+Move89: Thu Jan 15 04:51:25 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 1
+[D][clickViewLocal] pstView [312, 25] [368, 73], click point: (340, 51)
+[D][getNextMove] Long click point (340, 51) on View with hint [Spend]
+Move90: Thu Jan 15 04:51:47 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 4, nViewIndex: 0
+[D][clickViewLocal] pstView [72, 467] [408, 499], click point: (327, 494)
+[D][getNextMove] Click point (327, 494) on View [Delayed]
+Move91: Thu Jan 15 04:52:08 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 3, nViewIndex: 2
+[D][ScrollView] scroll from (347, 325) to (321, 227)!
+[D][getNextMove] Scroll from (347, 325) to (321, 227) on View at rect (284, 209)-(348, 389)
+Move92: Thu Jan 15 04:52:30 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 3
+[D][clickViewLocal] pstView [8, 121] [472, 161], click point: (228, 145)
+[D][getNextMove] Click point (228, 145) on View at rect (8, 121)-(472, 161)
+Move93: Thu Jan 15 04:52:51 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 11
+[D][clickViewLocal] pstView [284, 323] [348, 389], click point: (306, 354)
+[D][getNextMove] Long click point (306, 354) on View [2016]
+Move94: Thu Jan 15 04:53:13 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 1
+[W]Ignore character | which is not supported by Android.
+[W]Ignore character % which is not supported by Android.
+[W]Ignore character : which is not supported by Android.
+[W]Ignore character & which is not supported by Android.
+[W]Ignore character % which is not supported by Android.
+[D][InputSystemKey] system key: 66
+[D][getNextMove] Input text (Dw]Q.S-dz6PzA,@\.FoS) on View at rect (8, 121)-(472, 161)
+[D][getNextMove] Input keycode (66) to system
+Move95: Thu Jan 15 04:54:10 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 3
+[D][clickViewLocal] pstView [424, 25] [480, 73], click point: (465, 27)
+[D][getNextMove] Long click point (465, 27) on View with hint [Change color]
+Move96: Thu Jan 15 04:54:31 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 1
+[D][clickViewLocal] pstView [312, 25] [368, 73], click point: (328, 37)
+[D][getNextMove] Long click point (328, 37) on View with hint [Spend]
+Move97: Thu Jan 15 04:54:52 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 1
+[D][clickViewLocal] pstView [72, 427] [408, 467], click point: (185, 454)
+[D][getNextMove] Long click point (185, 454) on View at rect (72, 427)-(408, 467)
+Move98: Thu Jan 15 04:55:13 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 3
+[D][clickViewLocal] pstView [64, 508] [239, 562], click point: (115, 549)
+[D][getNextMove] Click point (115, 549) on View [Cancel]
+Move99: Thu Jan 15 04:55:33 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 5, nViewIndex: 0
+[D][InputSystemKey] system key: 4
+[D][getNextMove] Input keycode (4) to system
+Move100: Thu Jan 15 04:55:54 UTC+0800 2015
+[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 0, nViewIndex: 4
+[D][clickViewLocal] pstView [0, 137] [480, 291], click point: (111, 255)
+[D][getNextMove] Click point (111, 255) on View at rect (0, 137)-(480, 291)

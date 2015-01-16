@@ -1,0 +1,23 @@
+0_[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 1
+[D][InputStringOnView] string content: \]ccSAndroidSystem: adb shell sendevent /dev/input/event0 3 0 240
+adb shell sendevent /dev/input/event0 3 1 483
+adb shell sendevent /dev/input/event0 1 330 1
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell input keyevent 73
+
+AndroidSystem: adb shell input keyevent 72
+
+AndroidSystem: adb shell input keyevent 31
+
+AndroidSystem: adb shell input keyevent 31
+
+AndroidSystem: adb shell input keyevent 47
+
+[D][InputSystemKey] system key: 66
+AndroidSystem: adb shell input keyevent 66
+
+[D][getNextMove] Input text (\]ccS) on View at rect (72, 463)-(408, 503)
+[D][getNextMove] Input keycode (66) to system
+0_0

@@ -1,0 +1,20 @@
+0_[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 3, nViewIndex: 1
+[D][ScrollView] scroll from (336, 401) to (289, 400)!
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 336
+adb shell sendevent /dev/input/event0 3 1 401
+adb shell sendevent /dev/input/event0 1 330 1
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 289
+adb shell sendevent /dev/input/event0 3 1 400
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 289
+adb shell sendevent /dev/input/event0 3 1 400
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 1 330 0
+adb shell sendevent /dev/input/event0 0 0 0
+[D][getNextMove] Scroll from (336, 401) to (289, 400) on View at rect (256, 383)-(408, 423)
+0_0

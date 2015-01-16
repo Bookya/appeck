@@ -1,0 +1,86 @@
+Applications Memory Usage (kB):
+
+Uptime: 15525742 Realtime: 15525742
+
+
+
+** MEMINFO in pid 23578 [com.notriddle.budget] **
+
+                         Shared  Private     Heap     Heap     Heap
+
+                   Pss    Dirty    Dirty     Size    Alloc     Free
+
+                ------   ------   ------   ------   ------   ------
+
+       Native     3503      740     3448     4320     4128      191
+
+       Dalvik     4828     5128     4416     4944     4451      493
+
+       Cursor       16        0       16                           
+
+       Ashmem     3060     5856      132                           
+
+    Other dev        4        0        0                           
+
+     .so mmap      742     1768      216                           
+
+    .jar mmap        0        0        0                           
+
+    .apk mmap      146        0        0                           
+
+    .ttf mmap       25        0        0                           
+
+    .dex mmap      112        0        0                           
+
+   Other mmap      916       16       32                           
+
+      Unknown      184       16      184                           
+
+        TOTAL    13536    13524     8444     9264     8579      684
+
+ 
+
+ Objects
+
+               Views:      134         ViewRootImpl:        4
+
+         AppContexts:        4           Activities:        2
+
+              Assets:        2        AssetManagers:        2
+
+       Local Binders:       43        Proxy Binders:       24
+
+    Death Recipients:        0
+
+     OpenSSL Sockets:        0
+
+ 
+
+ SQL
+
+         MEMORY_USED:      937
+
+  PAGECACHE_OVERFLOW:      122          MALLOC_SIZE:       62
+
+ 
+
+ DATABASES
+
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+
+         4       20             22         3/40/2  /data/data/com.notriddle.budget/databases/envelopes.db
+
+         4       20             29       15/163/2  /data/data/com.notriddle.budget/databases/envelopes.db
+
+         4       20             28         1/25/2  /data/data/com.notriddle.budget/databases/envelopes.db
+
+         4       20             28       15/163/2  /data/data/com.notriddle.budget/databases/envelopes.db
+
+         4       20             28       17/229/2  /data/data/com.notriddle.budget/databases/envelopes.db
+
+ 
+
+ Asset Allocations
+
+    zip:/data/app/com.notriddle.budget-1.apk:/resources.arsc: 27K
+

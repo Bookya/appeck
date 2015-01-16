@@ -1,0 +1,7 @@
+0_[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 3
+[D][InputSystemKey] system key: 82
+AndroidSystem: adb shell input keyevent 82
+
+[D][getNextMove] Input keycode (82) to system
+0_0

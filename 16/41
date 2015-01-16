@@ -1,0 +1,7 @@
+0_[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 7
+[D][clickViewLocal] pstView [204, 323] [268, 389], click point: (235, 356)
+AndroidSystem: adb shell input tap 235 356
+
+[D][getNextMove] Long click point (235, 356) on View [17]
+0_0

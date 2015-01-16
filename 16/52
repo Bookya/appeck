@@ -1,0 +1,7 @@
+0_[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 1, nViewIndex: 3
+[D][clickViewLocal] pstView [424, 25] [480, 73], click point: (470, 25)
+AndroidSystem: adb shell input tap 470 25
+
+[D][getNextMove] Long click point (470, 25) on View with hint [Change color]
+0_0

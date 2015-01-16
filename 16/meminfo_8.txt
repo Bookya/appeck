@@ -1,0 +1,80 @@
+Applications Memory Usage (kB):
+
+Uptime: 13871408 Realtime: 13871408
+
+
+
+** MEMINFO in pid 23578 [com.notriddle.budget] **
+
+                         Shared  Private     Heap     Heap     Heap
+
+                   Pss    Dirty    Dirty     Size    Alloc     Free
+
+                ------   ------   ------   ------   ------   ------
+
+       Native     2525      744     2476     3232     2996      235
+
+       Dalvik     3982     5184     3608     4476     4328      148
+
+       Cursor        8        0        8                           
+
+       Ashmem     3072     5880      132                           
+
+    Other dev        4        0        0                           
+
+     .so mmap      590     1776      192                           
+
+    .jar mmap        0        0        0                           
+
+    .apk mmap      118        0        0                           
+
+    .ttf mmap       19        0        0                           
+
+    .dex mmap      108        0        0                           
+
+   Other mmap      710       16       24                           
+
+      Unknown      148       16      148                           
+
+        TOTAL    11284    13616     6588     7708     7324      383
+
+ 
+
+ Objects
+
+               Views:      206         ViewRootImpl:        3
+
+         AppContexts:        5           Activities:        3
+
+              Assets:        2        AssetManagers:        2
+
+       Local Binders:       27        Proxy Binders:       21
+
+    Death Recipients:        0
+
+     OpenSSL Sockets:        0
+
+ 
+
+ SQL
+
+         MEMORY_USED:      261
+
+  PAGECACHE_OVERFLOW:       41          MALLOC_SIZE:       62
+
+ 
+
+ DATABASES
+
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+
+         4       20             27         1/16/2  /data/data/com.notriddle.budget/databases/envelopes.db
+
+         4       20             28         3/19/2  /data/data/com.notriddle.budget/databases/envelopes.db
+
+ 
+
+ Asset Allocations
+
+    zip:/data/app/com.notriddle.budget-1.apk:/resources.arsc: 27K
+

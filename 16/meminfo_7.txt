@@ -1,0 +1,78 @@
+Applications Memory Usage (kB):
+
+Uptime: 13849525 Realtime: 13849525
+
+
+
+** MEMINFO in pid 23578 [com.notriddle.budget] **
+
+                         Shared  Private     Heap     Heap     Heap
+
+                   Pss    Dirty    Dirty     Size    Alloc     Free
+
+                ------   ------   ------   ------   ------   ------
+
+       Native     2265      788     2212     3160     2963      164
+
+       Dalvik     3675     5200     3300     4320     4069      251
+
+       Cursor        4        0        4                           
+
+       Ashmem     2472     4680      132                           
+
+    Other dev        4        0        0                           
+
+     .so mmap      590     1776      192                           
+
+    .jar mmap        0        0        0                           
+
+    .apk mmap      113        0        0                           
+
+    .ttf mmap       19        0        0                           
+
+    .dex mmap      108        0        0                           
+
+   Other mmap      680       16       24                           
+
+      Unknown      148       16      148                           
+
+        TOTAL    10078    12476     6012     7480     7032      415
+
+ 
+
+ Objects
+
+               Views:      168         ViewRootImpl:        2
+
+         AppContexts:        5           Activities:        3
+
+              Assets:        2        AssetManagers:        2
+
+       Local Binders:       23        Proxy Binders:       20
+
+    Death Recipients:        0
+
+     OpenSSL Sockets:        0
+
+ 
+
+ SQL
+
+         MEMORY_USED:      171
+
+  PAGECACHE_OVERFLOW:       24          MALLOC_SIZE:       62
+
+ 
+
+ DATABASES
+
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+
+         4       20             28         3/16/2  /data/data/com.notriddle.budget/databases/envelopes.db
+
+ 
+
+ Asset Allocations
+
+    zip:/data/app/com.notriddle.budget-1.apk:/resources.arsc: 27K
+

@@ -1,0 +1,29 @@
+0_[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 0
+[D][InputStringOnView] string content: m&eM[ lF_AndroidSystem: adb shell sendevent /dev/input/event0 3 0 240
+adb shell sendevent /dev/input/event0 3 1 443
+adb shell sendevent /dev/input/event0 1 330 1
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell input keyevent 41
+
+[W]Ignore character & which is not supported by Android.
+AndroidSystem: adb shell input keyevent 33
+
+AndroidSystem: adb shell input keyevent 41
+
+AndroidSystem: adb shell input keyevent 71
+
+AndroidSystem: adb shell input keyevent 62
+
+AndroidSystem: adb shell input keyevent 40
+
+AndroidSystem: adb shell input keyevent 34
+
+[W]Ignore character _ which is not supported by Android.
+[D][InputSystemKey] system key: 66
+AndroidSystem: adb shell input keyevent 66
+
+[D][getNextMove] Input text (meM[ lF) on View at rect (72, 423)-(408, 463)
+[D][getNextMove] Input keycode (66) to system
+0_0

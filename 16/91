@@ -1,0 +1,44 @@
+0_[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 3, nViewIndex: 2
+[D][ScrollView] scroll from (347, 325) to (321, 227)!
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 347
+adb shell sendevent /dev/input/event0 3 1 325
+adb shell sendevent /dev/input/event0 1 330 1
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 344
+adb shell sendevent /dev/input/event0 3 1 311
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 341
+adb shell sendevent /dev/input/event0 3 1 297
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 338
+adb shell sendevent /dev/input/event0 3 1 283
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 335
+adb shell sendevent /dev/input/event0 3 1 269
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 332
+adb shell sendevent /dev/input/event0 3 1 255
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 329
+adb shell sendevent /dev/input/event0 3 1 241
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 326
+adb shell sendevent /dev/input/event0 3 1 227
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 3 0 321
+adb shell sendevent /dev/input/event0 3 1 227
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell sendevent /dev/input/event0 1 330 0
+adb shell sendevent /dev/input/event0 0 0 0
+[D][getNextMove] Scroll from (347, 325) to (321, 227) on View at rect (284, 209)-(348, 389)
+0_0

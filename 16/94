@@ -1,0 +1,58 @@
+0_[D]package name: com.notriddle.budget. SNL filename: (None)
+[D][getNextMove] nMotionIndex: 2, nViewIndex: 1
+[D][InputStringOnView] string content: Dw]Q.|%:&S-dz%6PzA,@\.FoSAndroidSystem: adb shell sendevent /dev/input/event0 3 0 240
+adb shell sendevent /dev/input/event0 3 1 141
+adb shell sendevent /dev/input/event0 1 330 1
+adb shell sendevent /dev/input/event0 0 0 0
+
+AndroidSystem: adb shell input keyevent 32
+
+AndroidSystem: adb shell input keyevent 51
+
+AndroidSystem: adb shell input keyevent 72
+
+AndroidSystem: adb shell input keyevent 45
+
+AndroidSystem: adb shell input keyevent 56
+
+[W]Ignore character | which is not supported by Android.
+[W]Ignore character % which is not supported by Android.
+[W]Ignore character : which is not supported by Android.
+[W]Ignore character & which is not supported by Android.
+AndroidSystem: adb shell input keyevent 47
+
+AndroidSystem: adb shell input keyevent 69
+
+AndroidSystem: adb shell input keyevent 32
+
+AndroidSystem: adb shell input keyevent 54
+
+[W]Ignore character % which is not supported by Android.
+AndroidSystem: adb shell input keyevent 13
+
+AndroidSystem: adb shell input keyevent 44
+
+AndroidSystem: adb shell input keyevent 54
+
+AndroidSystem: adb shell input keyevent 29
+
+AndroidSystem: adb shell input keyevent 55
+
+AndroidSystem: adb shell input keyevent 77
+
+AndroidSystem: adb shell input keyevent 73
+
+AndroidSystem: adb shell input keyevent 56
+
+AndroidSystem: adb shell input keyevent 34
+
+AndroidSystem: adb shell input keyevent 43
+
+AndroidSystem: adb shell input keyevent 47
+
+[D][InputSystemKey] system key: 66
+AndroidSystem: adb shell input keyevent 66
+
+[D][getNextMove] Input text (Dw]Q.S-dz6PzA,@\.FoS) on View at rect (8, 121)-(472, 161)
+[D][getNextMove] Input keycode (66) to system
+0_0
