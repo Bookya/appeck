@@ -1,0 +1,42 @@
+g++ -c tinyxmlparser.cpp -DTIXML_USE_STL
+g++ -c tinyxmlerror.cpp -DTIXML_USE_STL
+g++ -c tinystr.cpp -DTIXML_USE_STL
+g++ -c tinyxml.cpp -DTIXML_USE_STL                                          
+g++ -c main.cpp -DTIXML_USE_STL
+g++ -o main main.o tinyxmlparser.o tinyxmlerror.o tinystr.o tinyxml.o
+
+###################################
+
+chmod a+x go.sh
+sudo tar -jcv -f 8.tar 8
+
+###################################
+
+g++ -std=c++11 -o testNu testNu_v3.cpp
+g++ -std=c++11 -o constuct construct.cpp
+./main 864/ txt_dir
+./testNu /var/www/appeck/Beta/automata/tester1_android/dd test test.svm
+
+###################################
+
+D:/adb shell
+
+ssh 140.112.42.145 -p 2015
+
+D:\Program Files\adt-bundle-windows-x86_64-20130514\sdk\build-tools\android-4.2.2  Aapt dump badging xxx.apk
+
+adb shell dumpsys meminfo
+
+###################################
+
+num to state:
+svm num = trans num*2-1 
+automata/trans -> upload/move 
+
+###################################
+
+take memory: grep com.fran mem4.1.txt | sed s%"com.frankcalise.h2droid (pid 19643)"%%g | sed s%kB:%%g |sed s%[[:space:]]%%g
+
+###################################
+
+find button:find ./tester1_android/12 -name "*" -exec grep -H "317" {} \;
